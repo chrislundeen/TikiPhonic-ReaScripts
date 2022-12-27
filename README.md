@@ -1,5 +1,5 @@
 # REAPER Scripts Repository
-collection of scripts for REAPER
+ReaPack repository for ReaScripts for REAPER
 
 
 Installation
