@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Chris Lundeen ReaScripts" commit="7df999e0ec32a9ceec761750a521b45ee6d59003">
+<index version="1" name="Chris Lundeen ReaScripts" commit="8ab00e53ac6869c89bb39fae99de684eaffc4dc4">
   <category name="Hardware Control">
-    <reapack name="twister_bank_1.lua" type="script" desc="'MIDIFighter Twister - Select Bank 1'">
-      <version name="1.0" author="chrislundeen" time="2023-01-02T03:02:07Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/7df999e0ec32a9ceec761750a521b45ee6d59003/Hardware%20Control/twister_bank_1.lua</source>
+    <reapack name="Lundeen MIDIFighter Twister Bank 1.lua" type="script" desc="'MIDIFighter Twister - Select Bank 1'">
+      <version name="1.0" author="chrislundeen" time="2023-01-02T03:32:42Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/8ab00e53ac6869c89bb39fae99de684eaffc4dc4/Hardware%20Control/Lundeen%20MIDIFighter%20Twister%20Bank%201.lua</source>
       </version>
     </reapack>
-    <reapack name="twister_bank_2.lua" type="script" desc="'MIDIFighter Twister - Select Bank 2'">
-      <version name="1.0" author="chrislundeen" time="2023-01-02T03:02:07Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/7df999e0ec32a9ceec761750a521b45ee6d59003/Hardware%20Control/twister_bank_2.lua</source>
+    <reapack name="Lundeen MIDIFighter Twister Bank 2.lua" type="script" desc="'MIDIFighter Twister - Select Bank 2'">
+      <version name="1.0" author="chrislundeen" time="2023-01-02T03:32:42Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/8ab00e53ac6869c89bb39fae99de684eaffc4dc4/Hardware%20Control/Lundeen%20MIDIFighter%20Twister%20Bank%202.lua</source>
       </version>
     </reapack>
-    <reapack name="twister_bank_3.lua" type="script" desc="'MIDIFighter Twister - Select Bank 3'">
-      <version name="1.0" author="chrislundeen" time="2023-01-02T03:02:07Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/7df999e0ec32a9ceec761750a521b45ee6d59003/Hardware%20Control/twister_bank_3.lua</source>
+    <reapack name="Lundeen MIDIFighter Twister Bank 3.lua" type="script" desc="'MIDIFighter Twister - Select Bank 3'">
+      <version name="1.0" author="chrislundeen" time="2023-01-02T03:32:42Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/8ab00e53ac6869c89bb39fae99de684eaffc4dc4/Hardware%20Control/Lundeen%20MIDIFighter%20Twister%20Bank%203.lua</source>
       </version>
     </reapack>
-    <reapack name="twister_bank_4.lua" type="script" desc="'MIDIFighter Twister - Select Bank 4'">
-      <version name="1.0" author="chrislundeen" time="2023-01-02T03:02:07Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/7df999e0ec32a9ceec761750a521b45ee6d59003/Hardware%20Control/twister_bank_4.lua</source>
+    <reapack name="Lundeen MIDIFighter Twister Bank 4.lua" type="script" desc="'MIDIFighter Twister - Select Bank 4'">
+      <version name="1.0" author="chrislundeen" time="2023-01-02T03:32:42Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/8ab00e53ac6869c89bb39fae99de684eaffc4dc4/Hardware%20Control/Lundeen%20MIDIFighter%20Twister%20Bank%204.lua</source>
       </version>
     </reapack>
   </category>
