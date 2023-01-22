@@ -1,24 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Chris Lundeen ReaScripts" commit="8ab00e53ac6869c89bb39fae99de684eaffc4dc4">
+<index version="1" name="Chris Lundeen ReaScripts" commit="94e91c33103f15f4ebb390456c506d89dbd63821">
   <category name="Hardware Control">
-    <reapack name="Lundeen MIDIFighter Twister Bank 1.lua" type="script" desc="'MIDIFighter Twister - Select Bank 1'">
-      <version name="1.0" author="chrislundeen" time="2023-01-02T03:32:42Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/8ab00e53ac6869c89bb39fae99de684eaffc4dc4/Hardware%20Control/Lundeen%20MIDIFighter%20Twister%20Bank%201.lua</source>
+    <reapack name="Tikiphonic MIDIFighter Twister Bank 1.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 1'">
+      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Hardware%20Control/Tikiphonic%20MIDIFighter%20Twister%20Bank%201.lua</source>
       </version>
     </reapack>
-    <reapack name="Lundeen MIDIFighter Twister Bank 2.lua" type="script" desc="'MIDIFighter Twister - Select Bank 2'">
-      <version name="1.0" author="chrislundeen" time="2023-01-02T03:32:42Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/8ab00e53ac6869c89bb39fae99de684eaffc4dc4/Hardware%20Control/Lundeen%20MIDIFighter%20Twister%20Bank%202.lua</source>
+    <reapack name="Tikiphonic MIDIFighter Twister Bank 2.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 2'">
+      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Hardware%20Control/Tikiphonic%20MIDIFighter%20Twister%20Bank%202.lua</source>
       </version>
     </reapack>
-    <reapack name="Lundeen MIDIFighter Twister Bank 3.lua" type="script" desc="'MIDIFighter Twister - Select Bank 3'">
-      <version name="1.0" author="chrislundeen" time="2023-01-02T03:32:42Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/8ab00e53ac6869c89bb39fae99de684eaffc4dc4/Hardware%20Control/Lundeen%20MIDIFighter%20Twister%20Bank%203.lua</source>
+    <reapack name="Tikiphonic MIDIFighter Twister Bank 3.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 3'">
+      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Hardware%20Control/Tikiphonic%20MIDIFighter%20Twister%20Bank%203.lua</source>
       </version>
     </reapack>
-    <reapack name="Lundeen MIDIFighter Twister Bank 4.lua" type="script" desc="'MIDIFighter Twister - Select Bank 4'">
-      <version name="1.0" author="chrislundeen" time="2023-01-02T03:32:42Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/8ab00e53ac6869c89bb39fae99de684eaffc4dc4/Hardware%20Control/Lundeen%20MIDIFighter%20Twister%20Bank%204.lua</source>
+    <reapack name="Tikiphonic MIDIFighter Twister Bank 4.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 4'">
+      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Hardware%20Control/Tikiphonic%20MIDIFighter%20Twister%20Bank%204.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Hardware Control/helpers">
+    <reapack name="Tikiphonic Helper MIDIFighter Twister Select Bank.lua" type="script" desc="'TikiPhonic: Helper - MIDIFighter Twister - Select Bank'">
+      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Hardware%20Control/helpers/Tikiphonic%20Helper%20MIDIFighter%20Twister%20Select%20Bank.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Tracks">
+    <reapack name="Tikiphonic Children tracks as gradients of parent tracks.lua" type="script" desc="'TikiPhonic: Set color of child tracks as gradients of parent track'">
+      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Tracks/Tikiphonic%20Children%20tracks%20as%20gradients%20of%20parent%20tracks.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic Filter Tracks Drums.lua" type="script" desc="'TikiPhonic: Filter Tracks -&gt; [Drums]'">
+      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Tracks/Tikiphonic%20Filter%20Tracks%20Drums.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Tracks/helpers">
+    <reapack name="Tikiphonic Helper Filter Tracks Manager.lua" type="script" desc="'TikiPhonic: Helper = Filter Tracks'">
+      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
+        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Tracks/helpers/Tikiphonic%20Helper%20Filter%20Tracks%20Manager.lua</source>
       </version>
     </reapack>
   </category>
