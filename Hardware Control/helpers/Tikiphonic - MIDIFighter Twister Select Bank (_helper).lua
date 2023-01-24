@@ -1,5 +1,5 @@
 --[[
-	* ReaScript Name: 'TikiPhonic: Helper - MIDIFighter Twister - Select Bank'
+	* ReaScript Name: 'TikiPhonic: MIDIFighter Twister - Select Bank (_helper)'
 	* Description: Helper - MIDIFighter Twister - Select Bank
 	* Lua script for Cockos REAPER
 	* Author: chrislundeen

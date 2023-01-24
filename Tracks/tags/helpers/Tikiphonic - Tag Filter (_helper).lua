@@ -1,5 +1,5 @@
 --[[
-    * ReaScript Name: 'TikiPhonic: Helper - Tag Filter Tracks'
+    * ReaScript Name: 'TikiPhonic: Tag Filter (_helper)'
     * Description: Helper - Tag Filter Tracks - (Manage tags on Track Manager filter field)
     * Lua script for Cockos REAPER
     * Author: chrislundeen
