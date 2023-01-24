@@ -22,7 +22,7 @@ function Init()
 
     -- Tags:
     -- General:
-    --  π	(option p) Part, top level groupings
+    --  ß	(option s) Section, top level groupings
     --  ç	(option c) Channel Strip
     --  ∫	(option b) Buss - FX For Mixing (contains sub items)
     -- MIDI Track:

@@ -1,6 +1,6 @@
 --[[
-  * ReaScript Name: 'TikiPhonic: Tag Filter (Part)'
-  * Description: Tag Filter Tracks - Part, top level groupings ([π] tag on Track Manager filter field)
+  * ReaScript Name: 'TikiPhonic: Tag Filter (Guitar FX)'
+  * Description: Tag Filter Tracks - Guitar FX ([gfx] tag on Track Manager filter field)
   * Lua script for Cockos REAPER
   * Author: chrislundeen
   * Author URI: https://github.com/chrislundeen/
@@ -24,7 +24,7 @@ end
 
 
 -- Params -------------------------------------------------------
-filterText = 'π' --  (option p)
+filterText = '[gfx]'
 -- End Params ---------------------------------------------------
 
 Init()

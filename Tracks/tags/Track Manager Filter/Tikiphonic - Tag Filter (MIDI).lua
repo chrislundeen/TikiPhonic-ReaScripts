@@ -1,6 +1,6 @@
 --[[
   * ReaScript Name: 'TikiPhonic: Tag Filter (MIDI)'
-  * Description: Tag Filter Tracks - MIDI ([µ] tag on Track Manager filter field)
+  * Description: Tag Filter Tracks - MIDI ([midi] tag on Track Manager filter field)
   * Lua script for Cockos REAPER
   * Author: chrislundeen
   * Author URI: https://github.com/chrislundeen/
@@ -24,7 +24,7 @@ end
 
 
 -- Params -------------------------------------------------------
-filterText = 'µ' --  (option m)
+filterText = '[midi]'
 -- End Params ---------------------------------------------------
 
 Init()

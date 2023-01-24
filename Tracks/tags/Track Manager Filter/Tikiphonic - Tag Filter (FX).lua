@@ -1,6 +1,6 @@
 --[[
-  * ReaScript Name: 'TikiPhonic: Tag Filter (Channel Strip)'
-  * Description: Tag Filter Tracks - Channel Strip ([ç] tag on Track Manager filter field)
+  * ReaScript Name: 'TikiPhonic: Tag Filter (FX)'
+  * Description: Tag Filter Tracks - FX ([fx] tag on Track Manager filter field)
   * Lua script for Cockos REAPER
   * Author: chrislundeen
   * Author URI: https://github.com/chrislundeen/
@@ -24,7 +24,7 @@ end
 
 
 -- Params -------------------------------------------------------
-filterText = 'ç' --  (option c)
+filterText = '[fx]'
 -- End Params ---------------------------------------------------
 
 Init()

@@ -1,6 +1,6 @@
 --[[
-  * ReaScript Name: 'TikiPhonic: Tag Filter (Keyboard)'
-  * Description: Tag Filter Tracks - Keyboard ([˚] tag on Track Manager filter field)
+  * ReaScript Name: 'TikiPhonic: Tag Filter (Part)'
+  * Description: Tag Filter Tracks - Part, top level groupings ([section] tag on Track Manager filter field)
   * Lua script for Cockos REAPER
   * Author: chrislundeen
   * Author URI: https://github.com/chrislundeen/
@@ -24,7 +24,7 @@ end
 
 
 -- Params -------------------------------------------------------
-filterText = '˚' --  (option k)
+filterText = '[section]'
 -- End Params ---------------------------------------------------
 
 Init()

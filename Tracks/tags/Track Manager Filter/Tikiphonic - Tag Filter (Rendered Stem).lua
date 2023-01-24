@@ -1,6 +1,6 @@
 --[[
-  * ReaScript Name: 'TikiPhonic: Tag Filter (Tape)'
-  * Description: Tag Filter Tracks - Tape (recorded audio from tape) ([†] tag on Track Manager filter field)
+  * ReaScript Name: 'TikiPhonic: Tag Filter (Rendered Stem Track)'
+  * Description: Tag Filter Tracks - Rendered Stem Track ([stem] tag on Track Manager filter field)
   * Lua script for Cockos REAPER
   * Author: chrislundeen
   * Author URI: https://github.com/chrislundeen/
@@ -24,7 +24,7 @@ end
 
 
 -- Params -------------------------------------------------------
-filterText = '†' --  (option t)
+filterText = 'stem'
 -- End Params ---------------------------------------------------
 
 Init()

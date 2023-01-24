@@ -1,6 +1,6 @@
 --[[
-  * ReaScript Name: 'TikiPhonic: Tag Filter (VST)'
-  * Description: Tag Filter Tracks - VST ([√] tag on Track Manager filter field)
+  * ReaScript Name: 'TikiPhonic: Tag Filter (Audio)'
+  * Description: Tag Filter Tracks - Audio ([audio] tag on Track Manager filter field)
   * Lua script for Cockos REAPER
   * Author: chrislundeen
   * Author URI: https://github.com/chrislundeen/
@@ -24,7 +24,7 @@ end
 
 
 -- Params -------------------------------------------------------
-filterText = '√' --  (option v)
+filterText = '[audio]'
 -- End Params ---------------------------------------------------
 
 Init()
