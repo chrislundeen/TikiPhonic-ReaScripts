@@ -1,6 +1,6 @@
 --[[
-    * ReaScript Name: 'TikiPhonic: Helper = Filter Tracks'
-    * Description: Helper - Filter Tracks - (Manage tags on Track Manager filter field)
+    * ReaScript Name: 'TikiPhonic: Helper - Tag Filter Tracks'
+    * Description: Helper - Tag Filter Tracks - (Manage tags on Track Manager filter field)
     * Lua script for Cockos REAPER
     * Author: chrislundeen
     * Author URI: https://github.com/chrislundeen/
@@ -19,16 +19,34 @@ function Init()
     -- Track Manager Filter Enhancements
 
     local tm = reaper.JS_Window_Find('Track Manager', true)
-    -- local filterText = ''
 
-    -- filterText = '©'
-    -- filterText = 'ß' -- Section
-    -- filterText = 'å' -- Audio
-    -- filterText = 'ƒ' -- FX
-    -- filterText = 'µ' -- MIDI
-    -- filterText = 'ø' -- xxxxxxx
-    -- filterText = '√' -- xxxxxxx
-    -- filterText = '' -- CLEAR
+    -- Tags:
+    -- General:
+    --  π	(option p) Part, top level groupings
+    --  ç	(option c) Channel Strip
+    --  ∫	(option b) Buss - FX For Mixing (contains sub items)
+    -- MIDI Track:
+    --  µ	(option m) MIDI Track
+    -- Instrument Types (VST, AU, etc):
+    --  ˆ	(option i) Instrument
+    --  ∂	(option d) Drums/Percussion
+    --  ˚	(option k) Keyboard
+    -- FX Types (VST, AU, etc):
+    --  ƒ	(option f) FX (general track level)
+    --  ©	(option g) Guitar FX
+    -- Audio Types:
+    --  å	(option a) Audio Track
+    --  ®	(option r) Rendered Stem Track
+    --  ø   (option o) Output (VST output)
+    --  †	(option t) Tape (recorded audio from tape)
+
+    -- Misc:
+    -- √	(option v) VST
+
+    -- ¡ ™ £ ¢ ∞ § ¶ • ª º – ≠
+    -- 1 2 3 4 5 6 7 8 9 0 - =
+    -- å ∫ ç ∂ ´ ƒ © ˙ ˆ ∆ ˚ ¬ µ ˜ ø π œ ® ß † ¨ √ ∑ ≈ ¥ 
+    -- a b c d e f g h i j k l m n o p q r s t u v w x y z
 
     if not tm or not reaper.JS_Window_IsVisible(tm) then
         reaper.Main_OnCommand(40906, 0) -- View: Show track manager window

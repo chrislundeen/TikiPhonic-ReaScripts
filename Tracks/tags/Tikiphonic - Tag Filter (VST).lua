@@ -1,6 +1,6 @@
 --[[
-  * ReaScript Name: 'TikiPhonic: Filter Tracks -> [Drums]'
-  * Description: Filter Tracks - Drums ([Drums] tag on Track Manager filter field)
+  * ReaScript Name: 'TikiPhonic: Tag Filter (VST)'
+  * Description: Tag Filter Tracks - VST ([√] tag on Track Manager filter field)
   * Lua script for Cockos REAPER
   * Author: chrislundeen
   * Author URI: https://github.com/chrislundeen/
@@ -10,7 +10,7 @@
   *   helper script inspiration from X-Raym - https://gist.github.com/X-Raym/f7f6328b82fe37e5ecbb3b81aff0b744
 ]]
 -- Set Helper Script --------------------------------------------
-local script = "helpers/Tikiphonic Helper Filter Tracks Manager.lua"
+local script = "helpers/Tikiphonic - Tag Filter (_helper).lua"
 local script_folder = debug.getinfo(1).source:match("@?(.*[\\|/])")
 local script_path = script_folder .. script
 preset_file_init = true
@@ -24,7 +24,7 @@ end
 
 
 -- Params -------------------------------------------------------
-filterText = '[Drums]'
+filterText = '√' --  (option v)
 -- End Params ---------------------------------------------------
 
 Init()
