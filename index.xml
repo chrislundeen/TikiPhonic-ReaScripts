@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="TikiPhonic-ReaScripts" commit="f34f2b2755b68b6cb789f7d63677347e748df1f6">
+<index version="1" name="TikiPhonic-ReaScripts" commit="30c1a421257223ba65a1b02be25d2d1184ed8a20">
   <category name="Hardware Control">
-    <reapack name="Tikiphonic MIDIFighter Twister Bank 1.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 1'">
-      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Hardware%20Control/Tikiphonic%20MIDIFighter%20Twister%20Bank%201.lua</source>
+    <reapack name="Tikiphonic - MIDIFighter Twister Select Bank 1.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 1'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:40:41Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/30c1a421257223ba65a1b02be25d2d1184ed8a20/Hardware%20Control/Tikiphonic%20-%20MIDIFighter%20Twister%20Select%20Bank%201.lua</source>
       </version>
     </reapack>
-    <reapack name="Tikiphonic MIDIFighter Twister Bank 2.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 2'">
-      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Hardware%20Control/Tikiphonic%20MIDIFighter%20Twister%20Bank%202.lua</source>
+    <reapack name="Tikiphonic - MIDIFighter Twister Select Bank 2.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 2'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:40:41Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/30c1a421257223ba65a1b02be25d2d1184ed8a20/Hardware%20Control/Tikiphonic%20-%20MIDIFighter%20Twister%20Select%20Bank%202.lua</source>
       </version>
     </reapack>
-    <reapack name="Tikiphonic MIDIFighter Twister Bank 3.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 3'">
-      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Hardware%20Control/Tikiphonic%20MIDIFighter%20Twister%20Bank%203.lua</source>
+    <reapack name="Tikiphonic - MIDIFighter Twister Select Bank 3.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 3'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:40:41Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/30c1a421257223ba65a1b02be25d2d1184ed8a20/Hardware%20Control/Tikiphonic%20-%20MIDIFighter%20Twister%20Select%20Bank%203.lua</source>
       </version>
     </reapack>
-    <reapack name="Tikiphonic MIDIFighter Twister Bank 4.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 4'">
-      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Hardware%20Control/Tikiphonic%20MIDIFighter%20Twister%20Bank%204.lua</source>
+    <reapack name="Tikiphonic - MIDIFighter Twister Select Bank 4.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 4'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:40:41Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/30c1a421257223ba65a1b02be25d2d1184ed8a20/Hardware%20Control/Tikiphonic%20-%20MIDIFighter%20Twister%20Select%20Bank%204.lua</source>
       </version>
     </reapack>
   </category>
