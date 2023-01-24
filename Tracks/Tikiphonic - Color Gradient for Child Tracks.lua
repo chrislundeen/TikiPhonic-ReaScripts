@@ -1,6 +1,6 @@
 --[[
-  * ReaScript Name: 'TikiPhonic: Color Gradien for Child Tracks'
-  * Description: Reset color for all children tracks to a gradient of their parent track
+  * ReaScript Name: 'TikiPhonic: Color Gradient for Child Tracks'
+  * Description: Set Color Gradient for Child Tracks
   * Lua script for Cockos REAPER
   * Author: chrislundeen
   * Author URI: https://github.com/chrislundeen/
