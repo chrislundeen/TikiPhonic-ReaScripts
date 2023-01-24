@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="TikiPhonic-ReaScripts" commit="94e91c33103f15f4ebb390456c506d89dbd63821">
+<index version="1" name="TikiPhonic-ReaScripts" commit="f34f2b2755b68b6cb789f7d63677347e748df1f6">
   <category name="Hardware Control">
     <reapack name="Tikiphonic MIDIFighter Twister Bank 1.lua" type="script" desc="'TikiPhonic: MIDIFighter Twister - Select Bank -&gt; 1'">
       <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
@@ -30,21 +30,88 @@
     </reapack>
   </category>
   <category name="Tracks">
-    <reapack name="Tikiphonic Children tracks as gradients of parent tracks.lua" type="script" desc="'TikiPhonic: Set color of child tracks as gradients of parent track'">
-      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Tracks/Tikiphonic%20Children%20tracks%20as%20gradients%20of%20parent%20tracks.lua</source>
-      </version>
-    </reapack>
-    <reapack name="Tikiphonic Filter Tracks Drums.lua" type="script" desc="'TikiPhonic: Filter Tracks -&gt; [Drums]'">
-      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Tracks/Tikiphonic%20Filter%20Tracks%20Drums.lua</source>
+    <reapack name="Tikiphonic - Color Gradient for Child Tracks.lua" type="script" desc="'TikiPhonic: Set color of child tracks as gradients of parent track'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/Tikiphonic%20-%20Color%20Gradient%20for%20Child%20Tracks.lua</source>
       </version>
     </reapack>
   </category>
-  <category name="Tracks/helpers">
-    <reapack name="Tikiphonic Helper Filter Tracks Manager.lua" type="script" desc="'TikiPhonic: Helper = Filter Tracks'">
-      <version name="1.0" author="chrislundeen" time="2023-01-22T16:16:11Z">
-        <source main="main">https://github.com/chrislundeen/ReaScripts/raw/94e91c33103f15f4ebb390456c506d89dbd63821/Tracks/helpers/Tikiphonic%20Helper%20Filter%20Tracks%20Manager.lua</source>
+  <category name="Tracks/tags">
+    <reapack name="Tikiphonic - Tag Filter (Audio).lua" type="script" desc="'TikiPhonic: Tag Filter (Audio)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Audio).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (Buss).lua" type="script" desc="'TikiPhonic: Tag Filter (Buss)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Buss).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (Channel Strip).lua" type="script" desc="'TikiPhonic: Tag Filter (Channel Strip)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Channel%20Strip).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (Drums).lua" type="script" desc="'TikiPhonic: Tag Filter (Drums)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Drums).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (FX).lua" type="script" desc="'TikiPhonic: Tag Filter (FX)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(FX).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (Guitar).lua" type="script" desc="'TikiPhonic: Tag Filter (Guitar FX)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Guitar).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (Instrument).lua" type="script" desc="'TikiPhonic: Tag Filter (Instrument)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Instrument).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (Keyboard).lua" type="script" desc="'TikiPhonic: Tag Filter (Keyboard)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Keyboard).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (MIDI).lua" type="script" desc="'TikiPhonic: Tag Filter (MIDI)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(MIDI).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (Output).lua" type="script" desc="'TikiPhonic: Tag Filter (Output)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Output).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (Part).lua" type="script" desc="'TikiPhonic: Tag Filter (Part)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Part).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (Rendered Stem).lua" type="script" desc="'TikiPhonic: Tag Filter (Rendered Stem Track)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Rendered%20Stem).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (Tape).lua" type="script" desc="'TikiPhonic: Tag Filter (Tape)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(Tape).lua</source>
+      </version>
+    </reapack>
+    <reapack name="Tikiphonic - Tag Filter (VST).lua" type="script" desc="'TikiPhonic: Tag Filter (VST)'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/Tikiphonic%20-%20Tag%20Filter%20(VST).lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Tracks/tags/helpers">
+    <reapack name="Tikiphonic - Tag Filter (_helper).lua" type="script" desc="'TikiPhonic: Helper - Tag Filter Tracks'">
+      <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/tags/helpers/Tikiphonic%20-%20Tag%20Filter%20(_helper).lua</source>
       </version>
     </reapack>
   </category>
