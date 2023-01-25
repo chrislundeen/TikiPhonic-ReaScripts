@@ -1,6 +1,6 @@
 --[[
     * ReaScript Name: 'TikiPhonic: Tag Track Name (_helper)'
-    * Description: Helper - Tag Track Nae - (Manage tags on Tracks)
+    * Description: Helper - Tag Track Name - (Manage tags on Tracks)
     * Lua script for Cockos REAPER
     * Author: chrislundeen
     * Author URI: https://github.com/chrislundeen/
@@ -16,6 +16,8 @@ filterAction = 'toggle' -- 'toggle', 'add', 'remove', 'clear'
 
 function Init()
 
+    SCRIPT_NAME = "TikiPhonic: Tag Track Name (_helper)"
+    
     -- Get number of selected tracks
     selNum = reaper.CountSelectedTracks(0)
 
@@ -28,42 +30,44 @@ function Init()
         -- Get track
         track = reaper.GetSelectedTrack(0, i)
         
-        -- Get old name
-        retval, oldName = reaper.GetTrackName(track, "")
+        if track then 
+            -- Get old name
+            retval, oldName = reaper.GetTrackName(track, "")
 
-        if oldName:find("%[") then
-            trackDesc = string.gsub(oldName:match("([^%[]*)%["), "^%s*(.-)%s*$", "%1")
-        else
-            trackDesc = string.gsub(oldName, "^%s*(.-)%s*$", "%1")
-        end
-
-        newTags = ''
-        tags = {}
-        tagExists = false
-        for tag in oldName:gmatch('(%[%w+%])') do
-            if string.lower(tag) == string.lower(tagName) then
-                tagExists = true
+            if oldName:find("%[") then
+                trackDesc = string.gsub(oldName:match("([^%[]*)%["), "^%s*(.-)%s*$", "%1")
             else
-                table.insert(tags, string.lower(tag))
+                trackDesc = string.gsub(oldName, "^%s*(.-)%s*$", "%1")
             end
-        end
-        if not tagExists then 
-            table.insert(tags, string.lower(tagName))
+
+            newTags = ''
+            tags = {}
+            tagExists = false
+            for tag in oldName:gmatch('(%[%w+%])') do
+                if string.lower(tag) == string.lower(tagName) then
+                    tagExists = true
+                else
+                    table.insert(tags, string.lower(tag))
+                end
+            end
+            if not tagExists then 
+                table.insert(tags, string.lower(tagName))
+            end
+
+            for _, tag in ipairs(tags) do
+                newTags = newTags .. tag
+            end
+
+            -- Set new name
+            retval, stringNeedBig = reaper.GetSetMediaTrackInfo_String(track, "P_NAME", trackDesc .. " " .. newTags, true)
+            
         end
 
-        for _, tag in ipairs(tags) do
-            newTags = newTags .. tag
-        end
-
-        -- Set new name
-        retval, stringNeedBig = reaper.GetSetMediaTrackInfo_String(track, "P_NAME", trackDesc .. " " .. newTags, true)
-        
         renameNum = i + 1
         
     end
 
     -- Notify how many tracks were renamed
-    -- SCRIPT_NAME = "TikiPhonic: Tag Track Name (_helper)"
     -- str = renameNum .. " track(s) were renamed to " .. newTags .. " from " .. trackDesc .. ".\n"
     -- reaper.ShowMessageBox(str, SCRIPT_NAME, 0)
 

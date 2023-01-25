@@ -57,22 +57,45 @@ function Init()
         local filter = reaper.JS_Window_FindChildByID(tm, 0x3EF)
         local content = ''
         
-        -- Get Contents of track manager filter
         if filter then 
+            -- Get Contents of track manager filter
             content = reaper.JS_Window_GetTitle(filter) 
-        end
-        
-        -- Clear track manager filter
-        if filter then 
-            reaper.JS_Window_SetTitle(filter, filterText)
-        end
-        
-        -- Set focus on track manager filter
-        if filter then 
+
+            if content:find("%[") then
+                trackDesc = string.gsub(content:match("([^%[]*)%["), "^%s*(.-)%s*$", "%1")
+            else
+                trackDesc = string.gsub(content, "^%s*(.-)%s*$", "%1")
+            end
+            trackDesc = string.gsub(trackDesc, "^(.-)(%s*OR%s*)$", "%1")
+    
+            newTags = ''
+            tags = {}
+            tagExists = false
+            for tag in content:gmatch('(%[%w+%])') do
+                if string.lower(tag) == string.lower(filterText) then
+                    tagExists = true
+                else
+                    table.insert(tags, string.lower(tag))
+                end
+            end
+            if not tagExists then 
+                table.insert(tags, string.lower(filterText))
+            end
+            tagCount = 0
+            for _, tag in ipairs(tags) do
+                if tagCount > 0 or not (trackDesc == nil or trackDesc== '') then 
+                    newTags = newTags .. ' OR '
+                end
+                newTags = newTags .. tag 
+                tagCount = tagCount + 1
+            end
+
+            -- Set track manager filter
+            reaper.JS_Window_SetTitle(filter, trackDesc .. " " .. newTags)
+            -- Set focus on track manager filter
             reaper.JS_Window_SetFocus(filter) 
         end
     end
-
 
 end
 
