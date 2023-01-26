@@ -24,7 +24,7 @@ end
 
 
 -- Params -------------------------------------------------------
-filterText = '[channelstrip]'
+tagName = '[channelstrip]'
 -- End Params ---------------------------------------------------
 
 Init()

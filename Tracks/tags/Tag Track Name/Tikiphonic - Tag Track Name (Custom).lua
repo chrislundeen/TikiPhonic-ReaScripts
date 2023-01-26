@@ -25,7 +25,8 @@ end
 local retval_inputs, retvals_csv = reaper.GetUserInputs( "Add Custom Track Tag", 1, "Tag", 'custom')
 
 -- Params -------------------------------------------------------
-tagName = '[' .. retvals_csv .. ']'
+isCustomTag = true
+tagName = '{' .. retvals_csv .. '}'
 -- End Params ---------------------------------------------------
 
 Init()

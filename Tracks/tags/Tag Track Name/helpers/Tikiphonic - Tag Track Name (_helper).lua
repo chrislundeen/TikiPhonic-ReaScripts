@@ -12,7 +12,7 @@
 
 -- Global Parameter Defaults:
 tagName = ''
-filterAction = 'toggle' -- 'toggle', 'add', 'remove', 'clear'
+isCustomTag = false
 
 function Init()
 
@@ -25,51 +25,65 @@ function Init()
     reaper.Undo_BeginBlock2(0)
 
     -- Loop through selected tracks
-    renameNum = 0
     for i = 0, selNum-1 do
         -- Get track
         track = reaper.GetSelectedTrack(0, i)
         
         if track then 
             -- Get old name
-            retval, oldName = reaper.GetTrackName(track, "")
+            retval, content = reaper.GetTrackName(track, "")
+            
+            newDescription = content
 
-            if oldName:find("%[") then
-                trackDesc = string.gsub(oldName:match("([^%[]*)%["), "^%s*(.-)%s*$", "%1")
-            else
-                trackDesc = string.gsub(oldName, "^%s*(.-)%s*$", "%1")
+            tags = {}
+            for tag in content:gmatch('(%[%w+%])') do
+                tags[string.lower(tag)] = 1
+                removeTag = tag
+                removeTag = removeTag:gsub("%[", "%%["):gsub("%]", "%%]")
+                newDescription = newDescription:gsub(removeTag, "")
             end
 
-            newTags = ''
-            tags = {}
-            tagExists = false
-            for tag in oldName:gmatch('(%[%w+%])') do
-                if string.lower(tag) == string.lower(tagName) then
-                    tagExists = true
+            customTags = {}
+            for ctag in content:gmatch('({%w+})') do
+                customTags[string.lower(ctag)] = 1
+                removeCTag = ctag
+                newDescription = newDescription:gsub(removeCTag, "")
+            end
+
+            if isCustomTag then
+                if customTags[string.lower(tagName)] == 1 then 
+                    customTags[string.lower(tagName)] = nil
                 else
-                    table.insert(tags, string.lower(tag))
+                    customTags[string.lower(tagName)] = 1
+                end
+            else
+                if tags[string.lower(tagName)] == 1 then 
+                    tags[string.lower(tagName)] = nil
+                else
+                    tags[string.lower(tagName)] = 1
                 end
             end
-            if not tagExists then 
-                table.insert(tags, string.lower(tagName))
+
+            tagCount = 0
+            newTags = ''
+            newCustomTags = ''
+            for j,_ in pairs(tags) do
+                newTags = newTags .. j
+                tagCount = tagCount + 1
+            end
+            for k,_ in pairs(customTags) do
+                newCustomTags = newCustomTags .. k
+                tagCount = tagCount + 1
             end
 
-            for _, tag in ipairs(tags) do
-                newTags = newTags .. tag
-            end
+            newDescription = newDescription:gsub("^%s*(.-)%s*$", "%1")
 
             -- Set new name
-            retval, stringNeedBig = reaper.GetSetMediaTrackInfo_String(track, "P_NAME", trackDesc .. " " .. newTags, true)
+            retval, stringNeedBig = reaper.GetSetMediaTrackInfo_String(track, "P_NAME", newDescription .. " " .. newCustomTags .. newTags, true)
             
         end
-
-        renameNum = i + 1
         
     end
-
-    -- Notify how many tracks were renamed
-    -- str = renameNum .. " track(s) were renamed to " .. newTags .. " from " .. trackDesc .. ".\n"
-    -- reaper.ShowMessageBox(str, SCRIPT_NAME, 0)
 
     -- End undo-block
     reaper.Undo_EndBlock2(0,SCRIPT_NAME,-1)

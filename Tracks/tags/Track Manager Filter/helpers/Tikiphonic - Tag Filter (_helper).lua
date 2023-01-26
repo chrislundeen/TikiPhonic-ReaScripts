@@ -11,42 +11,12 @@
 ]]
 
 -- Global Parameter Defaults:
-filterText = ''
-filterAction = 'toggle' -- 'toggle', 'add', 'remove', 'clear'
+tagName = ''
+isCustomTag = false
 
 function Init()
 
-    -- Track Manager Filter Enhancements
-
     local tm = reaper.JS_Window_Find('Track Manager', true)
-
-    -- Tags:
-    -- General:
-    --  ß	(option s) Section, top level groupings
-    --  ç	(option c) Channel Strip
-    --  ∫	(option b) Buss - FX For Mixing (contains sub items)
-    -- MIDI Track:
-    --  µ	(option m) MIDI Track
-    -- Instrument Types (VST, AU, etc):
-    --  ˆ	(option i) Instrument
-    --  ∂	(option d) Drums/Percussion
-    --  ˚	(option k) Keyboard
-    -- FX Types (VST, AU, etc):
-    --  ƒ	(option f) FX (general track level)
-    --  ©	(option g) Guitar FX
-    -- Audio Types:
-    --  å	(option a) Audio Track
-    --  ®	(option r) Rendered Stem Track
-    --  ø   (option o) Output (VST output)
-    --  †	(option t) Tape (recorded audio from tape)
-
-    -- Misc:
-    -- √	(option v) VST
-
-    -- ¡ ™ £ ¢ ∞ § ¶ • ª º – ≠
-    -- 1 2 3 4 5 6 7 8 9 0 - =
-    -- å ∫ ç ∂ ´ ƒ © ˙ ˆ ∆ ˚ ¬ µ ˜ ø π œ ® ß † ¨ √ ∑ ≈ ¥ 
-    -- a b c d e f g h i j k l m n o p q r s t u v w x y z
 
     if not tm or not reaper.JS_Window_IsVisible(tm) then
         reaper.Main_OnCommand(40906, 0) -- View: Show track manager window
@@ -61,37 +31,58 @@ function Init()
             -- Get Contents of track manager filter
             content = reaper.JS_Window_GetTitle(filter) 
 
-            if content:find("%[") then
-                trackDesc = string.gsub(content:match("([^%[]*)%["), "^%s*(.-)%s*$", "%1")
-            else
-                trackDesc = string.gsub(content, "^%s*(.-)%s*$", "%1")
-            end
-            trackDesc = string.gsub(trackDesc, "^(.-)(%s*OR%s*)$", "%1")
-    
-            newTags = ''
+            newDescription = content
+            newDescription = newDescription:gsub(" OR ", ""):gsub("^%s*(.-)%s*$", "%1")
+
             tags = {}
-            tagExists = false
             for tag in content:gmatch('(%[%w+%])') do
-                if string.lower(tag) == string.lower(filterText) then
-                    tagExists = true
+                tags[string.lower(tag)] = 1
+                removeTag = tag
+                removeTag = removeTag:gsub("%[", "%%["):gsub("%]", "%%]")
+                newDescription = newDescription:gsub(removeTag, "")
+            end
+
+            customTags = {}
+            for ctag in content:gmatch('({%w+})') do
+                customTags[string.lower(ctag)] = 1
+                removeCTag = ctag
+                newDescription = newDescription:gsub(removeCTag, "")
+            end
+
+            if isCustomTag then
+                if customTags[string.lower(tagName)] == 1 then 
+                    customTags[string.lower(tagName)] = nil
                 else
-                    table.insert(tags, string.lower(tag))
+                    customTags[string.lower(tagName)] = 1
+                end
+            else
+                if tags[string.lower(tagName)] == 1 then 
+                    tags[string.lower(tagName)] = nil
+                else
+                    tags[string.lower(tagName)] = 1
                 end
             end
-            if not tagExists then 
-                table.insert(tags, string.lower(filterText))
-            end
+
             tagCount = 0
-            for _, tag in ipairs(tags) do
-                if tagCount > 0 or not (trackDesc == nil or trackDesc== '') then 
+            newTags = ''
+            newCustomTags = ''
+            for j,_ in pairs(tags) do
+                if tagCount > 0 or not (newDescription == nil or newDescription== '') then 
                     newTags = newTags .. ' OR '
                 end
-                newTags = newTags .. tag 
+                newTags = newTags .. j
+                tagCount = tagCount + 1
+            end
+            for k,_ in pairs(customTags) do
+                if tagCount > 0 or not (newDescription == nil or newDescription== '') then 
+                    newCustomTags = newCustomTags .. ' OR '
+                end
+                newCustomTags = newCustomTags .. k
                 tagCount = tagCount + 1
             end
 
             -- Set track manager filter
-            reaper.JS_Window_SetTitle(filter, trackDesc .. " " .. newTags)
+            reaper.JS_Window_SetTitle(filter, newDescription .. newCustomTags .. newTags)
             -- Set focus on track manager filter
             reaper.JS_Window_SetFocus(filter) 
         end
@@ -99,12 +90,6 @@ function Init()
 
 end
 
-if not preset_file_init then -- If the file is run directly, it will execute Init(), else it will wait for Init() to be called explicitely from the preset scripts (usually after having modified some global variable states).
+if not preset_file_init then
   Init()
 end
-
-
-
-
-
-

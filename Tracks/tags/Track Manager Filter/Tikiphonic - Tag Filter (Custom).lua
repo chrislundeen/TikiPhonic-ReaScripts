@@ -1,6 +1,6 @@
 --[[
   * ReaScript Name: 'TikiPhonic: Tag Filter (Custom)'
-  * Description: Tag Filter Tracks - Custom ([{custom}] tag on Track Manager filter field)
+  * Description: Tag Filter Tracks - Custom (user input [{custom}] tag on Track Manager filter field)
   * Lua script for Cockos REAPER
   * Author: chrislundeen
   * Author URI: https://github.com/chrislundeen/
@@ -25,7 +25,8 @@ end
 local retval_inputs, retvals_csv = reaper.GetUserInputs( "Add Custom Track Tag", 1, "Tag", 'custom')
 
 -- Params -------------------------------------------------------
-filterText = '[' .. retvals_csv .. ']'
+isCustomTag = true
+tagName = '{' .. retvals_csv .. '}'
 -- End Params ---------------------------------------------------
 
 Init()
