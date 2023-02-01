@@ -6,8 +6,6 @@
   * Author URI: https://github.com/chrislundeen/
   * Licence: GPL v3
   * Version: 1.0
-  * Instructions:
-  *   rgbToHsv and hsvToRgb from Airon - Colour Swatch Window  https://forum.cockos.com/member.php?u=62784
 ]]
 
 function Init()
@@ -17,7 +15,6 @@ function Init()
     if retval_inputs then 
 
         searchVal, replaceVal = string.match(retvals_csv, "([^,]+),([^,]+)")
-
 
         SCRIPT_NAME = "TikiPhonic: Custom Tag Character Replacement"
         
