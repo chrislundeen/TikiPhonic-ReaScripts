@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="TikiPhonic-ReaScripts" commit="44728b393ce2b2ce254f34b3a783d5cddfaa558a">
+<index version="1" name="TikiPhonic-ReaScripts" commit="4e523ac220a29842b565e7e64d9e5dab2a0f0d77">
   <category name="_library">
     <reapack name="init.lua" type="script" desc="'TikiPhonicReaScripts'">
       <version name="1.0" author="chrislundeen" time="2023-01-29T21:44:47Z">
@@ -15,17 +15,17 @@
     </reapack>
   </category>
   <category name="_library/Tracks/Tag Manager">
-    <reapack name="FXChain to Tagged Track.lua" type="script" desc="'TikiPhonic: Tag Track Name (_helper)'">
-      <version name="1.0" author="chrislundeen" time="2023-01-29T21:44:47Z">
-        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/44728b393ce2b2ce254f34b3a783d5cddfaa558a/_library/Tracks/Tag%20Manager/FXChain%20to%20Tagged%20Track.lua</source>
+    <reapack name="FXChain Toggle for Selected Track.lua" type="script" desc="'TikiPhonic: Library: FXChain to Tagged Track (_helper)'">
+      <version name="1.0" author="chrislundeen" time="2023-02-01T02:48:58Z">
+        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/4e523ac220a29842b565e7e64d9e5dab2a0f0d77/_library/Tracks/Tag%20Manager/FXChain%20Toggle%20for%20Selected%20Track.lua</source>
       </version>
     </reapack>
-    <reapack name="Tag Filter.lua" type="script" desc="'TikiPhonic: Tag Filter (_helper)'">
+    <reapack name="Tag Filter.lua" type="script" desc="'TikiPhonic: Library: Tag Filter (_helper)'">
       <version name="1.0" author="chrislundeen" time="2023-01-29T21:44:47Z">
         <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/44728b393ce2b2ce254f34b3a783d5cddfaa558a/_library/Tracks/Tag%20Manager/Tag%20Filter.lua</source>
       </version>
     </reapack>
-    <reapack name="Tag Track Name.lua" type="script" desc="'TikiPhonic: Tag Track Name (_helper)'">
+    <reapack name="Tag Track Name.lua" type="script" desc="'TikiPhonic: Library: Tag Track Name (_helper)'">
       <version name="1.0" author="chrislundeen" time="2023-01-29T21:44:47Z">
         <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/44728b393ce2b2ce254f34b3a783d5cddfaa558a/_library/Tracks/Tag%20Manager/Tag%20Track%20Name.lua</source>
       </version>
@@ -54,7 +54,7 @@
     </reapack>
   </category>
   <category name="Tracks">
-    <reapack name="Tikiphonic - Color Gradient for Child Tracks.lua" type="script" desc="'TikiPhonic: Color Gradient for Child Tracks'">
+    <reapack name="Tikiphonic - Color Gradient for Child Tracks.lua" type="script" desc="'TikiPhonic: Set color of child tracks as gradients of parent track'">
       <version name="1.0" author="chrislundeen" time="2023-01-24T03:37:39Z">
         <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/f34f2b2755b68b6cb789f7d63677347e748df1f6/Tracks/Tikiphonic%20-%20Color%20Gradient%20for%20Child%20Tracks.lua</source>
       </version>
@@ -62,13 +62,6 @@
     <reapack name="Tikiphonic - Track Name Character Replacement.lua" type="script" desc="'TikiPhonic: Track Name Character Replacement'">
       <version name="1.0" author="chrislundeen" time="2023-01-27T20:20:51Z">
         <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/a56ad19c8718d2a88bd257ce6f2de061450411cb/Tracks/Tikiphonic%20-%20Track%20Name%20Character%20Replacement.lua</source>
-      </version>
-    </reapack>
-  </category>
-  <category name="Tracks/Tag Manager/FXChain to Tagged Track">
-    <reapack name="Tikiphonic - FXChain to Tagged Track (Channel Strip).lua" type="script" desc="'TikiPhonic: FXChain to Tagged Track (Channel Strip)'">
-      <version name="1.0" author="chrislundeen" time="2023-01-29T21:44:47Z">
-        <source main="main">https://github.com/chrislundeen/TikiPhonic-ReaScripts/raw/44728b393ce2b2ce254f34b3a783d5cddfaa558a/Tracks/Tag%20Manager/FXChain%20to%20Tagged%20Track/Tikiphonic%20-%20FXChain%20to%20Tagged%20Track%20(Channel%20Strip).lua</source>
       </version>
     </reapack>
   </category>
