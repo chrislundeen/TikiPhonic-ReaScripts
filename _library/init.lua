@@ -23,5 +23,5 @@ end
 
 ReaperIncludeLibraryFile("Tracks/Tag Manager/Tag Filter.lua")
 ReaperIncludeLibraryFile("Tracks/Tag Manager/Tag Track Name.lua")
-ReaperIncludeLibraryFile("Tracks/Tag Manager/FXChain to Tagged Track.lua")
+ReaperIncludeLibraryFile("Tracks/Tag Manager/FXChain Toggle for Selected Track.lua")
 ReaperIncludeLibraryFile("Hardware Control/MidiFighter/Twister/Select Bank.lua")
