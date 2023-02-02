@@ -1,3 +1,12 @@
+-- @description TikiPhonic: Tag Track Name: [audio]
+-- @author: chrislundeen
+-- @website https://github.com/chrislundeen/
+-- @version 0.0.1
+-- @about
+--   Tag Track Name: [audio]
+--   - rgbToHsv and hsvToRgb from Airon - Colour Swatch Window  https://forum.cockos.com/member.php?u=62784
+
+
 --[[
   * ReaScript Name: 'TikiPhonic: Tag Track Name (Audio)'
   * Description: - Tag Track Name - (Manage tags on Tracks) - Audio Track

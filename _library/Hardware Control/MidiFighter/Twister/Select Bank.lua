@@ -1,12 +1,11 @@
---[[
-  * ReaScript Name: 'TikiPhonic: Library: MIDIFighter Twister - Select Bank'
-  * Description: Helper - MIDIFighter Twister - Select Bank
-  * Lua script for Cockos REAPER
-  * Author: chrislundeen
-  * Author URI: https://github.com/chrislundeen/
-  * Licence: GPL v3
-  * Version: 1.0
-]]
+-- @description TikiPhonic: Library: Hardware: MIDIFighter Twister: Select Bank
+-- @author: chrislundeen
+-- @website https://github.com/chrislundeen/
+-- @provides [nomain] .
+-- @noindex
+-- @version 0.0.1
+-- @about
+--   Library Function: Selects numbered bank for DJ TechTools MidiFighter Twister
 
 function InitMidiFighterTwisterSelectBank(bank)
   bank = bank or 1 --(1-4)
@@ -19,7 +18,6 @@ function InitMidiFighterTwisterSelectBank(bank)
     s = string.match(name, device_name)
     if (tostring(name) == tostring(device_name)) then
       dev_id = i
-      --reaper.ShowConsoleMsg(tostring(name).."\n" )
     end
   end
   if not dev_id then return end

@@ -1,67 +1,60 @@
---[[
-  * ReaScript Name: 'TikiPhonic: Track Name Character Replacement'
-  * Description: Track Name Character Replacement
-  * Lua script for Cockos REAPER
-  * Author: chrislundeen
-  * Author URI: https://github.com/chrislundeen/
-  * Licence: GPL v3
-  * Version: 1.0
-]]
+-- @description TikiPhonic: Track Name Character Replacement
+-- @author: chrislundeen
+-- @website https://github.com/chrislundeen/
+-- @version 0.0.1
+-- @about
+--   Track Name Character Replacement
 
 function Init()
 
-    local retval_inputs, retvals_csv = reaper.GetUserInputs("Track Name Character Replacement", 2, "Search:,Replace:", 'search,replace')
-    
-    if retval_inputs then 
+  local retval_inputs, retvals_csv = reaper.GetUserInputs("Track Name Character Replacement", 2, "Search:,Replace:",
+    'search,replace')
 
-        searchVal, replaceVal = string.match(retvals_csv, "([^,]+),([^,]+)")
+  if retval_inputs then
 
-        SCRIPT_NAME = "TikiPhonic: Custom Tag Character Replacement"
-        
-        -- Get number of selected tracks
-        selNum = reaper.CountSelectedTracks(0)
+    searchVal, replaceVal = string.match(retvals_csv, "([^,]+),([^,]+)")
 
-        -- Begin undo-block
-        reaper.Undo_BeginBlock2(0)
+    SCRIPT_NAME = "TikiPhonic: Custom Tag Character Replacement"
 
-        -- Loop through selected tracks
-        renameNum = 0
-        for i = 0, selNum-1 do
-            -- Get track
-            track = reaper.GetSelectedTrack(0, i)
-            
-            if track then 
-                -- Get old name
-                retval, oldTrackName = reaper.GetTrackName(track, "")
+    -- Get number of selected tracks
+    selNum = reaper.CountSelectedTracks(0)
 
-                trackName = oldTrackName
-                if trackName:find(searchVal) then
-                    trackName = trackName:gsub(searchVal,replaceVal)
-                end
-            
-                -- Set new name
-                retval, stringNeedBig = reaper.GetSetMediaTrackInfo_String(track, "P_NAME", trackName, true)
-                
-            end
+    -- Begin undo-block
+    reaper.Undo_BeginBlock2(0)
 
-            renameNum = i + 1
-            
+    -- Loop through selected tracks
+    renameNum = 0
+    for i = 0, selNum - 1 do
+      -- Get track
+      track = reaper.GetSelectedTrack(0, i)
+
+      if track then
+        -- Get old name
+        retval, oldTrackName = reaper.GetTrackName(track, "")
+
+        trackName = oldTrackName
+        if trackName:find(searchVal) then
+          trackName = trackName:gsub(searchVal, replaceVal)
         end
 
-        -- Notify how many tracks were renamed
-        -- str = renameNum .. " track(s) were renamed to " .. newTags .. " from " .. trackDesc .. ".\n"
-        -- reaper.ShowMessageBox(str, SCRIPT_NAME, 0)
+        -- Set new name
+        retval, stringNeedBig = reaper.GetSetMediaTrackInfo_String(track, "P_NAME", trackName, true)
 
-        -- End undo-block
-        reaper.Undo_EndBlock2(0,SCRIPT_NAME,-1)
+      end
+
+      renameNum = i + 1
 
     end
+
+    -- Notify how many tracks were renamed
+    -- str = renameNum .. " track(s) were renamed to " .. newTags .. " from " .. trackDesc .. ".\n"
+    -- reaper.ShowMessageBox(str, SCRIPT_NAME, 0)
+
+    -- End undo-block
+    reaper.Undo_EndBlock2(0, SCRIPT_NAME, -1)
+
+  end
 
 end
 
 Init()
-
-
-
-
-

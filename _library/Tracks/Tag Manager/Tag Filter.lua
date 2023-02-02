@@ -1,12 +1,14 @@
---[[
-  * ReaScript Name: 'TikiPhonic: Library: Tag Filter (_helper)'
-  * Description: Helper - Tag Filter Tracks - (Manage tags on Track Manager filter field)
-  * Lua script for Cockos REAPER
-  * Author: chrislundeen
-  * Author URI: https://github.com/chrislundeen/
-  * Licence: GPL v3
-  * Version: 1.0
-]]
+-- @description TikiPhonic: Library: Tracks: Tag Filter
+-- @author: chrislundeen
+-- @website https://github.com/chrislundeen/
+-- @provides [nomain] .
+-- @noindex
+-- @version 0.0.1
+-- @about
+--   Library Function: Filters Visible Tracks by Selected Tags
+--   - Tags follow format [tag] or {customtag}
+--   - Tags are added at the end of track name
+--   - Manages visibility of tags via Track Manager filter field
 
 function InitTagFilter(tagName, isCustomTag)
 

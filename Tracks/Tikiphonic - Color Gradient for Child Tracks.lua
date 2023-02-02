@@ -1,14 +1,10 @@
---[[
-  * ReaScript Name: 'TikiPhonic: Set color of child tracks as gradients of parent track'
-  * Description: Reset color for all children tracks to a gradient of their parent track
-  * Lua script for Cockos REAPER
-  * Author: chrislundeen
-  * Author URI: https://github.com/chrislundeen/
-  * Licence: GPL v3
-  * Version: 1.0
-  * Instructions:
-  *   rgbToHsv and hsvToRgb from Airon - Colour Swatch Window  https://forum.cockos.com/member.php?u=62784
-]]
+-- @description TikiPhonic: Color Gradient for Child Tracks
+-- @author: chrislundeen
+-- @website https://github.com/chrislundeen/
+-- @version 0.0.1
+-- @about
+--   Reset color for all children tracks to a gradient of their parent track
+--   - rgbToHsv and hsvToRgb from Airon - Colour Swatch Window  https://forum.cockos.com/member.php?u=62784
 
 for key in pairs(reaper) do _G[key] = reaper[key] end
 

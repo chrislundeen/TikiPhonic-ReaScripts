@@ -1,12 +1,16 @@
---[[
-  * ReaScript Name: 'TikiPhonic: Library: Tag Track Name (_helper)'
-  * Description: Helper - Tag Track Name - (Manage tags on Tracks)
-  * Lua script for Cockos REAPER
-  * Author: chrislundeen
-  * Author URI: https://github.com/chrislundeen/
-  * Licence: GPL v3
-  * Version: 1.0
-]]
+-- @description TikiPhonic: Library: Tracks: Tag Track Name
+-- @author: chrislundeen
+-- @website https://github.com/chrislundeen/
+-- @provides [nomain] .
+-- @noindex
+-- @version 0.0.1
+-- @about
+--   Library Function: Manages Tags on Tracks via Track Name
+--   - Tags follow format [tag] or {customtag}
+--   - Tags are added at the end of track name
+--   - Manages tags via toggle in track name
+--   - Adds tag if not on selected track, otherwise removes desired tag from track name
+--   - You can associate any FXChain with a tag
 
 function InitTrackTagName(tagName, FXChainName)
 

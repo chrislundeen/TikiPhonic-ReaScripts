@@ -1,14 +1,11 @@
---[[
-  * ReaScript Name: 'TikiPhonic: Library: FXChain to Tagged Track (_helper)'
-  * Description: Helper - FXChain to Tagged Track
-  * Lua script for Cockos REAPER
-  * Author: chrislundeen
-  * Author URI: https://github.com/chrislundeen/
-  * Licence: GPL v3
-  * Version: 1.0
-  * Instructions:
-  *   http://forum.cockos.com/showthread.php?t=188335
-]]
+-- @description TikiPhonic: Library: Tracks: Tag Manager: FXChain Toggle for Selected Track
+-- @author: chrislundeen
+-- @website https://github.com/chrislundeen/
+-- @provides [nomain] .
+-- @noindex
+-- @version 0.0.1
+-- @about
+--   Library Function: Toggles FXChain for Selected Track
 
 function AddFXChainToTrack(tr, chunk)
   local _, chunk_ch = reaper.GetTrackStateChunk(tr, '', false)
